@@ -3,6 +3,7 @@ def jogar_forca():
     print('BEM VINDO AO JOGO DE FORCA')
     print('*--------------------*')
     palavra_secreta = "carambóla"
+    letras_acertadas = ["_", "_", "_", "_", "_", "_", "_", "_", "_"]
     perdeu = False
     acertou = False
 
@@ -16,7 +17,9 @@ def jogar_forca():
         for letra in palavra_secreta:
             if(chute.lower() == letra.lower()):
                 print(f'A letra {chute} está na posição {index}!')
+                letras_acertadas[index] = letra 
             index = index+1
+            
 
 
 
